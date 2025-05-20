@@ -8,6 +8,7 @@ SELECT
   p.nombre AS provincia,
   SUM(pe.captura) AS total_captura
 FROM public.pesca pe
+JOIN public.departamento d ON pe.departamento_id = d.id
 JOIN public.provincia p ON d.provincia_id = p.id
 GROUP BY p.nombre
 ORDER BY total_captura DESC;
@@ -34,4 +35,4 @@ FROM pesca pe
 JOIN departamento d ON pe.departamento_id = d.id
 JOIN provincia p ON d.provincia_id = p.id
 GROUP BY p.nombre, d.nombre
-ORDER BY cantidad_especies DESC;
+ORDER BY cantidad_especies DESC;
