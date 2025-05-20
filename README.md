@@ -144,7 +144,7 @@ Accede a Apache Superset y crea una conexión a la base de datos PostgreSQL en l
 ### **2. Consultas SQL**
 
 #### **Consulta 1: Total de captura por provincia**
-Esta consulta permite analizar el total capturado por provincia.
+
 
 ```sql
 SELECT
@@ -157,7 +157,7 @@ ORDER BY total_captura DESC;
 ```
 
 #### **Consulta 2: Top 3 de especies más capturadas a nivel nacional**
-Esta consulta permite analizar el top 3 de especies más capturadas por provincia y departamento
+
 ```sql
 SELECT
   pe.especie,
@@ -167,8 +167,7 @@ GROUP BY pe.especie
 ORDER BY total_captura DESC
 LIMIT 3;
 ```
-#### **Consulta 3: cantidad de especies distintas capturadas por provincia y departamento**
-Esta consulta perimite analizar la especie más capturada junto con la provincia.
+#### **Consulta 3: Cantidad de especies distintas capturadas por provincia y departamento**
 
 ```sql
 SELECT
