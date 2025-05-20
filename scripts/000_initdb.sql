@@ -179,9 +179,11 @@ SELECT
 
 FROM pesca_temp
 WHERE departamento_id::BIGINT IN (SELECT id FROM departamento);
+
 /*  
 Carga de datos en la tabla definitiva
 */
+
 INSERT INTO public.provincia (
     id,
     nombre,
